@@ -124,7 +124,7 @@ export default function Home() {
     {/* Mobile: expanded text link */}
     {isExpanded && (
       <a
-        href="https://wa.me/628117262423?text=Halo%20HappyDenta%2C%20saya%20ingin%20konsultasi%20mengenai%20perawatan%20gigi."
+        href="https://wa.me/62811726242?text=Halo%20HappyDenta%2C%20saya%20ingin%20konsultasi%20mengenai%20perawatan%20gigi."
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center gap-3 font-semibold text-base bg-[#00B6D6] text-white rounded-full shadow-xl px-6 py-4 md:hidden"
@@ -137,7 +137,7 @@ export default function Home() {
 
     {/* Desktop: combined phone icon and text link */}
     <a
-      href="https://wa.me/628117262423?text=Halo%20HappyDenta%2C%20saya%20ingin%20konsultasi%20mengenai%20perawatan%20gigi."
+      href="https://wa.me/62811726242?text=Halo%20HappyDenta%2C%20saya%20ingin%20konsultasi%20mengenai%20perawatan%20gigi."
       target="_blank"
       rel="noopener noreferrer"
       className="hidden md:flex items-center justify-center gap-3 bg-[#00B6D6] text-white rounded-full shadow-xl px-6 py-4 hover:bg-[#0095b0] transition-all hover:scale-105"
@@ -278,7 +278,7 @@ export default function Home() {
                   Kami siap membantu kamu mencapai itu dengan perawatan terbaik!
                 </p>
                 <a 
-                  href="https://wa.me/628117262423?text=Halo%20HappyDenta%2C%20saya%20ingin%20konsultasi%20mengenai%20perawatan%20gigi." 
+                  href="https://wa.me/62811726242?text=Halo%20HappyDenta%2C%20saya%20ingin%20konsultasi%20mengenai%20perawatan%20gigi." 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
@@ -626,7 +626,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="https://wa.me/628117262423?text=Halo%20HappyDenta%2C%20saya%20ingin%20konsultasi%20mengenai%20perawatan%20gigi." 
+                  href="https://wa.me/62811726242?text=Halo%20HappyDenta%2C%20saya%20ingin%20konsultasi%20mengenai%20perawatan%20gigi." 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
