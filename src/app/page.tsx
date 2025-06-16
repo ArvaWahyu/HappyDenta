@@ -18,8 +18,7 @@ import {
   Phone,
   Menu,
   X,
-  ChevronLeft,
-  ChevronRight
+
 } from "lucide-react"
 import {
   Carousel,
@@ -31,7 +30,7 @@ import {
 } from "@/components/ui/carousel"
 import { useState, useCallback, useEffect } from "react"
 import useEmblaCarousel from 'embla-carousel-react'
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, } from "framer-motion"
 
 const services = [
   {
@@ -86,8 +85,8 @@ export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0)
   const [api, setApi] = useState<CarouselApi>()
   const [isExpanded, setIsExpanded] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
-  const [isCollapsing, setIsCollapsing] = useState(false)
+  const [isVisible, setIsVisible] = (false)
+  const [isCollapsing, setIsCollapsing] = (false)
 
   useEffect(() => {
     if (!api) return
@@ -142,10 +141,10 @@ export default function Home() {
     [api]
   )
 
-  const handleButtonClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const  = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (window.innerWidth < 768) {
-      e.preventDefault()
-      setIsExpanded((prev) => !prev)
+      e.()
+      ((prev) => !prev)
     }
   }
 
