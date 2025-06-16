@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
 import { Button } from "@/components/ui/button"
@@ -18,8 +19,6 @@ import {
   Phone,
   Menu,
   X,
-  ChevronLeft,
-  ChevronRight
 } from "lucide-react"
 import {
   Carousel,
@@ -30,8 +29,6 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel"
 import { useState, useCallback, useEffect } from "react"
-import useEmblaCarousel from 'embla-carousel-react'
-import { motion, AnimatePresence } from "framer-motion"
 
 const services = [
   {
@@ -86,8 +83,6 @@ export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0)
   const [api, setApi] = useState<CarouselApi>()
   const [isExpanded, setIsExpanded] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
-  const [isCollapsing, setIsCollapsing] = useState(false)
 
   useEffect(() => {
     if (!api) return
@@ -96,12 +91,6 @@ export default function Home() {
       setActiveSlide(api.selectedScrollSnap())
     })
   }, [api])
-
-  // Manage visibility state for smooth collapse animation
-  useEffect(() => {
-    setIsVisible(isExpanded);
-    setIsCollapsing(false);
-  }, [isExpanded]);
 
   // Collapse expanded "hubungi sekarang" button on scroll on mobile with debounce and smooth transition
   useEffect(() => {
@@ -116,10 +105,7 @@ export default function Home() {
           const currentScrollY = window.scrollY;
           // Collapse only if scrolled more than 20px since last check
           if (Math.abs(currentScrollY - lastScrollY) > 20) {
-            setIsCollapsing(true);
-            setTimeout(() => {
-              setIsExpanded(false);
-            }, 300); // delay to allow transition
+            setIsExpanded(false);
           }
           lastScrollY = currentScrollY;
           ticking = false;
@@ -141,13 +127,6 @@ export default function Home() {
     },
     [api]
   )
-
-  const handleButtonClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (window.innerWidth < 768) {
-      e.preventDefault()
-      setIsExpanded((prev) => !prev)
-    }
-  }
 
   return (
 <div className="min-h-screen bg-white relative">
